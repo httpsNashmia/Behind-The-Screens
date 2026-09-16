@@ -1,8 +1,6 @@
 body {
-    margin:0;
-    
+    margin:0;   
 }
-
 .home {
     min-height: 100vh;
     background: repeating linear gradient(
@@ -11,8 +9,5 @@ body {
         #b51f2a 45px,
         #f5eee1 45px,
         #f5eee1 90px
-
-
     );
-
 }
