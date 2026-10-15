@@ -1,18 +1,270 @@
+<!--python3 -m http.server 8000-->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Behind The Screens</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
+    
+    <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#journal">Journal</a>
+                <a href="#film">Film</a>
+                <a href="#contact">Contact</a>
+            
+            </nav>
+    
+            <main class="home">      
 
-    <main class="home">
-        <img src="red_stripes_background1.png" class="background1" alt="Red Stripes Background">
-        <h1>Behind the Screens</h1>
-        <p>A portfolio</p>
+        
+        <img src="single_star1.png" class="star1" alt="yellow hand-drawn star">
+
+        <img src="single_star2.png" class="star2" alt="yellow hand-drawn star">
+
+        <img src="single_star3.png" class="star3" alt="yellow hand-drawn star">
+
+        <img src="black-cat.png" class="cat" alt="blackcat">
+
+        <div class="paper">
+            
+            <img src="starzz.png" class="paper_image" alt="paper with stars">
+        
+            <div class="paper-content">
+
+                <h1>Behind the Screens</h1>
+                <p>A portfolio</p>
+
+            </div>     
+       
+        </div>  
     
     </main>
-    <script src="script.js"></script>
+   
+    
+    <section id="about" class="about">
+
+        <img src="background2about.png" class=background2 alt="lined paper">
+
+        <div class="about-content">
+
+            <div class="header-wrapper">
+                <img src="about.header1.png" class="header1" alt="vintage style header with text 'So, who is she?'">
+                <h1>So, who is she?</h1>
+            </div>   
+            
+                <div class="para1">
+
+                <p>
+                    Hi there! I'm Nashmia- A student, artist, 
+                    table tennis player and professional overthinker from Bangladesh.
+                    This is my first ever coding project so it might be a little rough around the edges. 
+                    I love learning new things so this is probably my 12077th side quest. 
+                    Have a look around, make yourself at home, and PLEASE ignore any questionable design decisions. I like to call them "creative choices".
+                </p>
+
+
+                </div>
+
+            <div class="para2">
+
+                <p>
+                    Click on the patches below to learn more about me and my interests!
+                </p>
+            
+            </div>
+
+            <div class="STAR1">
+                <img src="single_star1.png" class="STAR1" alt="yellow hand-drawn star">
+            </div>
+
+            <div class="STAR2">
+                <img src="single_star1.png" class="STAR2" alt="yellow hand-drawn star">
+            </div>
+
+            <div class="loafing _cat">
+                <img src="Loafing Black Cat Sticker.png" class="loafing_cat" alt="blackcat">
+            </div>
+
+
+            
+            <div class="stamp-container">
+
+                <div class="stamp-card" onclick="this.classList.toggle('flipped')">
+
+                    <div class="stamp-inner">
+
+                        <div class="stamp-front">
+                            <img src="Brown Leather Patch with Cream Stitching.png" alt="Art stamp">
+                            <h2>ART</h2>
+                        </div>
+
+                        <div class="stamp-back">
+                            <h2>ART</h2>
+                            <p>~Motivation?-Weather dependent</p>
+                            <p>~Experience?-7 years(ish)</p>
+                            <p>~Patience?-Non existent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stamp-card" onclick="this.classList.toggle('flipped')">
+
+                    <div class="stamp-inner">
+
+                        <div class="stamp-front">
+                            <img src="Brown Leather Patch with Cream Stitching.png" alt="Table tennis stamp">
+                            <h2>TABLE TENNIS</h2>
+                        </div>
+
+                        <div class="stamp-back">
+                            <h2>TABLE TENNIS</h2>
+                            <p>~Competitive?-Yes</p>
+                            <p>~Good at it?-Debatable</p>
+                            <p>~Would play again?-Definitely</p>
+                        </div>
+                    
+                    </div>
+            
+                </div>
+
+
+                <div class="stamp-card" onclick="this.classList.toggle('flipped')">
+
+                    <div class="stamp-inner">
+
+                        <div class="stamp-front">
+                            <img src="Brown Leather Patch with Cream Stitching.png" alt="French stamp">
+                            <h2>FRENCH</h2>
+                        </div>
+
+                        <div class="stamp-back">
+                            <h2>FRENCH</h2>
+                            <p>~Level?-B1(ish)</p>
+                            <p>~Current Struggle?-Everything</p>
+                            <p>~Favorite word?-...I forgot</p>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    
+    </section>
+
+
+    <section id="journal" class="journal">
+
+        <img src="Vintage Kraft Journal Spread.png" alt="vintage journal spread" class="journal-background">
+        <img src="Welp, Sleepy Tomato Sticker.png" alt="sleepy tomato sticker" class="tomato-sticker">
+        <img src="Tuff Helmet Crayon Mascot.png" alt="tuff helmet crayon mascot" class="blueberry-sticker">
+        <img src="Goofy Crayon Face Demanding Food.png" alt="goofy crayon face demanding food" class="face-sticker">
+        <img src="photobooth.png" class="photobooth" alt="cute photobooth strip doodle of me">
+        <img src="Handmade Paper Collage 2026.png" alt="handmade paper collage" class="collage-2026">
+        <img src="Crayon-Textured Star Girl Sticker.png" alt="crayon-textured star girl sticker" class="girl-sticker">
+        <img src="EYE.png" alt="eye doodle" class="eye">
+
+        <div class="journal-content">
+            
+            <div class="content1">
+
+                <p>
+                    I love doodling and everything related to art! 
+                    I have done everything from charcoal to acrylics to pottery.
+                    Next on my list is to try my hand at photography and digital art. 
+                    All the little doodles you see here are hand drawn by me!
+                    Also, I am OBSESSED with cats(if you can't already tell).
+                </p>
+
+            </div>
+
+            <div class="content2">
+
+                <p>
+                    <h1>Fandoms:</h1>
+                    
+                    <h5>
+                        -Alien Stage(Ivan is alive.)
+                        -Ergo Proxy
+                        -The Russian Figure Skating Team
+                        -Tomodachi Game
+                        -Dead Plate
+                        -Angels Of Death
+                        -The Secret History
+                        -TV Girls
+                        -RadioHead
+                        -Deftones
+                        -Eyedress
+                    </h5>
+                </p>
+
+            </div>
+
+            <div class="content3">
+                <p>
+                    I can sketch realistically too!>-<
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="content4">
+                <p>
+                    Journal
+                </p>
+        </div>
+        
+
+    </section>
+
+    <section id="film" class="film">
+
+        <img src="PAPER1.jpg" 
+        class="PAPER" 
+        alt="Vintage Torn Parchment Paper Scrap.png">
+
+        <img src="polaroid.png" class="polaroid1" alt="polaroid frame">
+
+        <img src="polaroid.png" class="polaroid2" alt="polaroid frame">
+
+        <img src="polaroid.png" class="polaroid3" alt="polaroid frame">
+
+        <img src="polaroid.png" class="polaroid4" alt="polaroid frame">
+
+        <img src="polaroid.png" class="polaroid5" alt="polaroid frame">
+
+        <div>
+            <img src="photobooth1.png" class="strip1" alt="cute photo strip of me and my friends">
+        </div>
+        
+        
+        
+        
+        <div class="film-content">
+
+            <p>
+                <h1>
+                    ARCHIVE-2026 
+                </h1>
+            </p>
+
+        </div>
+        
+
+    </section>
+ <script src="script.js"></script>
 </body>
 </html>
+
+
+        
+    
