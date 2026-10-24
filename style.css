@@ -40,11 +40,13 @@ nav a {
     width: 70%;
     min-height: 70vh;
     position: relative;
+    margin:48px auto 0;
 }
 
 .paper_image {
     width: 100%;
     display: block;
+    height: block;
 }
 
 
@@ -53,22 +55,17 @@ nav a {
     font-family: "Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
     font-size: 7rem;
+    margin:5px;
 }
 
-.paper-content h1 {
-    margin: 5px;
-}
-
-.paper-content p {
-    margin: 0px;
-}
 
 .paper-content p {
     font-family: "Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
     font-size: 3rem;
+    margin:0px;
+    
 }
-
 
 .paper-content {
     position: absolute;
@@ -77,6 +74,7 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width:90%;
 }
 
 .cat {
@@ -84,7 +82,7 @@ nav a {
     position: absolute;
     z-index: 2;
     left: 5%;
-    bottom: 0%;
+    bottom: -2%;
 }
 
 
@@ -431,14 +429,11 @@ nav a {
 
 .film {
     position: relative;
-    width: 100%;
-    min-height: 1000px;
-    overflow: hidden;
 }
 
 .PAPER {
-    position: absolute;
-    width: 1300px;
+    position: relative;
+    width: 1250px;
     height: 650px;
     object-fit: fill;
     z-index: 1;
@@ -512,10 +507,322 @@ nav a {
 
 .strip1 {
     position: absolute;
-    width: 180px;
-    height: 500px;
+    width: 150px;
+    height: 350px;
     object-fit: fill;
-    bottom: 180px;
-    left: 370px;
+    bottom: -120px;
+    left: 390px;
     z-index: 2;
+}
+
+.strip2 {
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    object-fit: fill;
+    top: 270px;
+    right: 280px;
+    z-index: 2;
+}
+
+.camera {
+    position: absolute;
+    width: 370px;
+    height: auto;
+    object-fit: contain;
+    top: 350px;
+    left: 10px;
+    z-index: 10;
+}
+
+.film-content2 {
+    position: absolute;
+    width: 50px;
+    top: 35%;
+    left: 400px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.5rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+
+.contact-background {
+    position: absolute;
+    top: 200px;
+    left:0;
+    width: 100%;
+    height: 550px;
+    object-fit: fill;
+    z-index: 1;
+}
+
+.contact-content {
+    position: absolute;
+    width: 50px;
+    top: 20%;
+    left: 450px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgb(255, 248, 147);
+    font-size: 2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.contact-content2 {
+    position: absolute;
+    width: 50px;
+    top: 40%;
+    left: 250px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.polaroid6 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    top:350px;
+    left: 800px;
+    z-index: 2;
+}
+
+.insta-logo {
+    position: relative;
+    width: 100px;
+    height: auto;
+    top:50px;
+    left: -350px;
+    z-index: 2;
+}
+.github-logo {
+    position: relative;
+    width: 70px;
+    height: auto;
+    top:150px;
+    left: -437px;
+    z-index: 2;
+}
+.email-logo {
+    position: relative;
+    width: 90px;
+    height: auto;
+    top:270px;
+    left: -520px;
+    z-index: 2;
+}
+
+.insta {
+    position: absolute;
+    width: 20px;
+    top: 63%;
+    left: 180px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.git {
+    position: absolute;
+    width: 20px;
+    top: 80%;
+    left: 180px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.mail {
+    position: absolute;
+    width: 20px;
+    top: 95%;
+    left: 180px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.pic1-sunglasses {
+    position: absolute;
+    width: 230px;
+    height: 220px;
+    top:295px;
+    left: 935px;
+    z-index: 3;
+}
+
+.polaroid7 {
+    position: absolute;
+    width: 300px;
+    height:300px;
+    top:270px;
+    left: 900px;
+    z-index: 3;
+}
+
+.sigma {
+    position: absolute;
+    width: 100px;
+    height:150px;
+    top:200px;
+    left: 1100px;
+    z-index: 4;
+}
+
+
+.byepic {
+    position: absolute;
+    width: 320px;
+    height:300px;
+    top:387px;
+    left: 840px;
+    z-index: 5;
+}
+
+.bye {
+    position: absolute;
+    width: 320px;
+    height:300px;
+    top:350px;
+    left: 710px;
+    z-index: 5;
+}
+
+.star4 {
+
+    position: absolute;
+    width: 320px;
+    height:300px;
+    top:260px;
+    left: 670px;
+    z-index: 2;
+
+}
+
+.japan1 {
+    position: absolute;
+    width: 275px;
+    height:170px;
+    top:573px;
+    left: 40px;
+    z-index: 5;
+}
+
+.japan2 {
+    position: absolute;
+    width: 275px;
+    height:140px;
+    top:215px;
+    left: 70px;
+    z-index: 5;
+}
+
+.zero {
+    position: absolute;
+    width: 230px;
+    height:260px;
+    top:328px;
+    left: 586px;
+    z-index: 5;
+}
+
+.glasses {
+    position: absolute;
+    width: 200px;
+    height:200px;
+    top:225px;
+    left: 1025px;
+    z-index: 5;
+}
+
+.dagang {
+    position: absolute;
+    width: 240px;
+    height:135px;
+    top:618px;
+    left: 930px;
+    z-index: 5;
+}
+
+.disney {
+    position: absolute;
+    width: 140px;
+    height:135px;
+    top:280px;
+    left: 400px;
+    z-index: 5;
+}
+
+.film-content3 {
+    position: absolute;
+    width: 10px;
+    top: 700px;
+    left: 550px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.5rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.film-content4 {
+    position: absolute;
+    width: 10px;
+    bottom: 0px;
+    left: 980px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.1rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    width: 100%;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x:hidden;
 }
