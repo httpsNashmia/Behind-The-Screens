@@ -40,11 +40,13 @@ nav a {
     width: 70%;
     min-height: 70vh;
     position: relative;
+    margin:48px auto 0;
 }
 
 .paper_image {
     width: 100%;
     display: block;
+    height: block;
 }
 
 
@@ -53,22 +55,17 @@ nav a {
     font-family: "Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
     font-size: 7rem;
+    margin:5px;
 }
 
-.paper-content h1 {
-    margin: 5px;
-}
-
-.paper-content p {
-    margin: 0px;
-}
 
 .paper-content p {
     font-family: "Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
     font-size: 3rem;
-}
+    margin:0px;
 
+}
 
 .paper-content {
     position: absolute;
@@ -77,6 +74,7 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width:90%;
 }
 
 .cat {
@@ -84,7 +82,7 @@ nav a {
     position: absolute;
     z-index: 2;
     left: 5%;
-    bottom: 0%;
+    bottom: -2%;
 }
 
 
@@ -116,7 +114,7 @@ nav a {
     min-height: 100vh;
     padding: 100px 10%;
     box-sizing: border-box;
-    
+
     position: relative;
 }
 
@@ -124,18 +122,18 @@ nav a {
     position: absolute;
     width: 100%;
     height: 80%;
-    
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     z-index: 1;
 }
 
 .about-content {
     position: relative;
     z-index: 3;
-    
+
     text-align: center;
     font-family:"Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
@@ -246,7 +244,7 @@ nav a {
 .stamp-back {
     position: absolute;
     inset:0;
-    
+
     box-sizing: border-box;
     padding: 30px;
 
@@ -431,14 +429,11 @@ nav a {
 
 .film {
     position: relative;
-    width: 100%;
-    min-height: 1000px;
-    overflow: hidden;
 }
 
 .PAPER {
-    position: absolute;
-    width: 1300px;
+    position: relative;
+    width: 1250px;
     height: 650px;
     object-fit: fill;
     z-index: 1;
@@ -512,10 +507,585 @@ nav a {
 
 .strip1 {
     position: absolute;
-    width: 180px;
-    height: 500px;
+    width: 150px;
+    height: 350px;
     object-fit: fill;
-    bottom: 180px;
-    left: 370px;
+    bottom: -120px;
+    left: 390px;
     z-index: 2;
+}
+
+.strip2 {
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    object-fit: fill;
+    top: 270px;
+    right: 280px;
+    z-index: 2;
+}
+
+.camera {
+    position: absolute;
+    width: 370px;
+    height: auto;
+    object-fit: contain;
+    top: 350px;
+    left: 10px;
+    z-index: 10;
+}
+
+.film-content2 {
+    position: absolute;
+    width: 50px;
+    top: 35%;
+    left: 400px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.5rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+
+.contact-background {
+    position: absolute;
+    top: 200px;
+    left:0;
+    width: 100%;
+    height: 550px;
+    object-fit: fill;
+    z-index: 1;
+}
+
+.contact-content {
+    position: absolute;
+    width: 50px;
+    top: 20%;
+    left: 450px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgb(255, 248, 147);
+    font-size: 2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.contact-content2 {
+    position: absolute;
+    width: 50px;
+    top: 40%;
+    left: 250px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.polaroid6 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    top:350px;
+    left: 800px;
+    z-index: 2;
+}
+
+.insta-logo {
+    position: relative;
+    width: 100px;
+    height: auto;
+    top:50px;
+    left: -350px;
+    z-index: 2;
+}
+.github-logo {
+    position: relative;
+    width: 70px;
+    height: auto;
+    top:150px;
+    left: -437px;
+    z-index: 2;
+}
+.email-logo {
+    position: relative;
+    width: 90px;
+    height: auto;
+    top:270px;
+    left: -520px;
+    z-index: 2;
+}
+
+.insta {
+    position: absolute;
+    width: 20px;
+    top: 63%;
+    left: 180px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.git {
+    position: absolute;
+    width: 20px;
+    top: 80%;
+    left: 180px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.mail {
+    position: absolute;
+    width: 20px;
+    top: 95%;
+    left: 180px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.2rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.pic1-sunglasses {
+    position: absolute;
+    width: 230px;
+    height: 220px;
+    top:295px;
+    left: 935px;
+    z-index: 3;
+}
+
+.polaroid7 {
+    position: absolute;
+    width: 300px;
+    height:300px;
+    top:270px;
+    left: 900px;
+    z-index: 3;
+}
+
+.sigma {
+    position: absolute;
+    width: 100px;
+    height:150px;
+    top:200px;
+    left: 1100px;
+    z-index: 4;
+}
+
+
+.byepic {
+    position: absolute;
+    width: 320px;
+    height:300px;
+    top:387px;
+    left: 840px;
+    z-index: 5;
+}
+
+.bye {
+    position: absolute;
+    width: 320px;
+    height:300px;
+    top:350px;
+    left: 710px;
+    z-index: 5;
+}
+
+.star4 {
+
+    position: absolute;
+    width: 320px;
+    height:300px;
+    top:260px;
+    left: 670px;
+    z-index: 2;
+
+}
+
+.japan1 {
+    position: absolute;
+    width: 275px;
+    height:170px;
+    top:573px;
+    left: 40px;
+    z-index: 5;
+}
+
+.japan2 {
+    position: absolute;
+    width: 275px;
+    height:140px;
+    top:215px;
+    left: 70px;
+    z-index: 5;
+}
+
+.zero {
+    position: absolute;
+    width: 230px;
+    height:260px;
+    top:328px;
+    left: 586px;
+    z-index: 5;
+}
+
+.glasses {
+    position: absolute;
+    width: 200px;
+    height:200px;
+    top:225px;
+    left: 1025px;
+    z-index: 5;
+}
+
+.dagang {
+    position: absolute;
+    width: 240px;
+    height:135px;
+    top:618px;
+    left: 930px;
+    z-index: 5;
+}
+
+.disney {
+    position: absolute;
+    width: 140px;
+    height:135px;
+    top:280px;
+    left: 400px;
+    z-index: 5;
+}
+
+.film-content3 {
+    position: absolute;
+    width: 10px;
+    top: 700px;
+    left: 550px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.5rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+.film-content4 {
+    position: absolute;
+    width: 10px;
+    bottom: 0px;
+    left: 980px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    color:rgba(83, 44, 20, 0.977);
+    font-size: 1.1rem;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    white-space:nowrap;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    width: 100%;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x:hidden;
+}
+
+#quest-progress-track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 10020;
+    background: rgba(255, 244, 211, 0.55);
+    pointer-events: none;
+}
+
+    #quest-progress-fill {
+        height: 100%;
+        width: 0%;
+        background: #d6a72c;
+        transition: width 0.15s linear;
+    }
+
+    #quest-menu-button {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 10010;
+        padding: 11px 16px;
+        border: 2px solid #70442d;
+        border-radius: 10px;
+        background: #fff0bd;
+        color: #70442d;
+        font: 20px 'Caveat', cursive;
+        cursor: pointer;
+        box-shadow: 3px 4px 0 rgba(70, 40, 20, 0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+
+    }
+
+    #quest-menu-button:hover {
+        transform: translateY(-3px) rotate(-2deg);
+        box-shadow: 4px 7px 0 rgba(70, 40, 20, 0.18);
+
+    }
+
+    #quest-panel {
+        position: fixed;
+        right: 18px;
+        bottom: 75px;
+        width: min(75vh, 650px);
+        overflow-y: auto;
+        z-index: 10011;
+        box-sizing: border-box;
+        padding: 20px;
+        border: 3px solid #70442d;
+        border-radius: 12px;
+        background: #fff7dc;
+        color: #583a2a;
+        box-shadow: 5px 7px 0 rgba(70, 40, 20, 0.2);
+        font-family: 'Caveat', cursive;
+
+    }
+
+    #quest-panel[hidden] {
+        display: none;
+    }
+
+    #quest-panel h2 {
+        font-size: 29px;
+        margin: 0 0 8px;
+    }
+
+    #quest-panel p{
+        font-size: 19px;
+        line-height: 1.35;
+    }
+
+    .quest-action {
+        display: block;
+        width:100%;
+        box-sizing: border-box;
+        margin-top: 9px;
+        padding: 9px 12px;
+        border: 1px solid #875a3b;
+        border-radius: 7px;
+        background: #f5df9e;
+        color: #583a2a;
+        font: 19px 'Caveat', cursive;
+        text-align: left;
+        cursor:pointer;
+    }
+
+    .quest-action:hover {
+        background: #efd088;
+    }
+    #quest-notification {
+        position: fixed;
+        left: 50%;
+        bottom: 22px;
+        z-index: 10030;
+        width: max-Content;
+        max-width: calc(100vm - 40px);
+        box-sizing: border-box;
+        padding: 12px 18px;
+        border: 2px solid #70442d;
+        border-radius: 8px;
+        background: #fff0bd;
+        color: #583a2a;
+        font: 21px 'Caveat', cursive;
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+        translate: -50% 12px;
+
+    }
+
+    .quest-collectible {
+        cursor: pointer;
+    }
+
+    .quest-collected {
+        outline: 2px dashed #d6a72c;
+        outline-offset: 4px;
+    }
+
+    body.quest-night-mode {
+        background-color: #302b39;
+        color:#f9e9c8;
+    }
+
+    body.quest-night-mode #quest-panel {
+        background: #393244;
+        color: #fff0d2;
+        border-color: #e3c178;
+    }
+
+    body.quest-night-mode .quest-action {
+        background: #514459;
+        color: #fff0d2;
+        border-color: #d8bd87;
+    }
+
+    body.quest-night-mode #quest-menu-button {
+        background: #514459;
+        color: #fff0d2;
+        border-color: #e3c178;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #quest-progress-fill,
+        #quest-menu-button {
+            transition: none;
+        }
+    }
+
+ .mood-scrapbook,
+ .love-scrapbook,
+ .secrat-diary,
+ .guestbook {
+    box-sizing: border-box;
+    width:min(90%, 650px);
+    margin: 40px auto;
+    padding: 24px;
+    border: 2px solid #70442d;
+    border-radius: 5px;
+    background: #fff0bd;
+    color: #583a2a;
+    box-shadow: 5px 6px 0 ragba(70, 40, 20, 0.15);
+    font-family: "Caveat", cursive;
+    font-size: 21px;
+}
+
+.mood-stickers,
+.love-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mood-stickers button,
+.secret-diary button,
+.guestbook button {
+    padding: 9px 14px;
+    border:1px solid #875a3b;
+    border-radius: 7px;
+    background: #f5df9e;
+    color: #583a2a;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mood-stickers button:hover,
+.secret-diary button:hover,
+.guestbook button:hover {
+    transform: rotate(-2deg) scale(1.04);
+}
+
+.mood-stickers .mood-selected{
+    background: #e9b9b0;
+    border-width: 2px;
+}
+#diary-entry {
+    margin-top: 18px;
+    padding: 16px;
+    border: 1px dashed #875a3b;
+    background: #fff8df;
+}
+
+#diary-entry[hidden] {
+    display: none;
+}
+
+.love-card {
+    flex: 1 1 180px;
+    max-width: 220px;
+    padding:14px;
+    border: 1px dashed #875a3b;
+    background: #fff8df;
+    text-align: center;
+}
+
+.love-icon {
+    font-size: 32px;
+}
+
+.love-card h3{
+    margin-bottom: 4px;
+}
+
+.guestbook label,
+.guestbook input,
+.guestbook textarea {
+    display: block;
+    width :100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+.guestbook input,
+.guestbook textarea {
+    padding: 10px;
+    border: 1px solid #875a3b;
+    border-radius: 4px;
+    background: #fff8df;
+    color: #583a2a;
+    font: 18px inherit;
+}
+
+.guestbook-note {
+    margin-top: 14px;
+    padding: 12px;
+    background: #fff8df;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .mood-scrapbook,
+    .love-scrapbook,
+    .secret-diary,
+    .guestbook {
+        padding: 16px;
+        font-size: 18px;
+    }
 }
