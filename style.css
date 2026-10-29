@@ -64,7 +64,7 @@ nav a {
     color: rgba(83, 44, 20, 0.977);
     font-size: 3rem;
     margin:0px;
-    
+
 }
 
 .paper-content {
@@ -114,7 +114,7 @@ nav a {
     min-height: 100vh;
     padding: 100px 10%;
     box-sizing: border-box;
-    
+
     position: relative;
 }
 
@@ -122,18 +122,18 @@ nav a {
     position: absolute;
     width: 100%;
     height: 80%;
-    
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     z-index: 1;
 }
 
 .about-content {
     position: relative;
     z-index: 3;
-    
+
     text-align: center;
     font-family:"Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
@@ -244,7 +244,7 @@ nav a {
 .stamp-back {
     position: absolute;
     inset:0;
-    
+
     box-sizing: border-box;
     padding: 30px;
 
@@ -825,4 +825,267 @@ html, body {
 
 body {
     overflow-x:hidden;
+}
+
+#quest-progress-track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 10020;
+    background: rgba(255, 244, 211, 0.55);
+    pointer-events: none;
+}
+
+    #quest-progress-fill {
+        height: 100%;
+        width: 0%;
+        background: #d6a72c;
+        transition: width 0.15s linear;
+    }
+
+    #quest-menu-button {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 10010;
+        padding: 11px 16px;
+        border: 2px solid #70442d;
+        border-radius: 10px;
+        background: #fff0bd;
+        color: #70442d;
+        font: 20px 'Caveat', cursive;
+        cursor: pointer;
+        box-shadow: 3px 4px 0 rgba(70, 40, 20, 0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+
+    }
+
+    #quest-menu-button:hover {
+        transform: translateY(-3px) rotate(-2deg);
+        box-shadow: 4px 7px 0 rgba(70, 40, 20, 0.18);
+
+    }
+
+    #quest-panel {
+        position: fixed;
+        right: 18px;
+        bottom: 75px;
+        width: min(75vh, 650px);
+        overflow-y: auto;
+        z-index: 10011;
+        box-sizing: border-box;
+        padding: 20px;
+        border: 3px solid #70442d;
+        border-radius: 12px;
+        background: #fff7dc;
+        color: #583a2a;
+        box-shadow: 5px 7px 0 rgba(70, 40, 20, 0.2);
+        font-family: 'Caveat', cursive;
+
+    }
+
+    #quest-panel[hidden] {
+        display: none;
+    }
+
+    #quest-panel h2 {
+        font-size: 29px;
+        margin: 0 0 8px;
+    }
+
+    #quest-panel p{
+        font-size: 19px;
+        line-height: 1.35;
+    }
+
+    .quest-action {
+        display: block;
+        width:100%;
+        box-sizing: border-box;
+        margin-top: 9px;
+        padding: 9px 12px;
+        border: 1px solid #875a3b;
+        border-radius: 7px;
+        background: #f5df9e;
+        color: #583a2a;
+        font: 19px 'Caveat', cursive;
+        text-align: left;
+        cursor:pointer;
+    }
+
+    .quest-action:hover {
+        background: #efd088;
+    }
+    #quest-notification {
+        position: fixed;
+        left: 50%;
+        bottom: 22px;
+        z-index: 10030;
+        width: max-Content;
+        max-width: calc(100vm - 40px);
+        box-sizing: border-box;
+        padding: 12px 18px;
+        border: 2px solid #70442d;
+        border-radius: 8px;
+        background: #fff0bd;
+        color: #583a2a;
+        font: 21px 'Caveat', cursive;
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+        translate: -50% 12px;
+
+    }
+
+    .quest-collectible {
+        cursor: pointer;
+    }
+
+    .quest-collected {
+        outline: 2px dashed #d6a72c;
+        outline-offset: 4px;
+    }
+
+    body.quest-night-mode {
+        background-color: #302b39;
+        color:#f9e9c8;
+    }
+
+    body.quest-night-mode #quest-panel {
+        background: #393244;
+        color: #fff0d2;
+        border-color: #e3c178;
+    }
+
+    body.quest-night-mode .quest-action {
+        background: #514459;
+        color: #fff0d2;
+        border-color: #d8bd87;
+    }
+
+    body.quest-night-mode #quest-menu-button {
+        background: #514459;
+        color: #fff0d2;
+        border-color: #e3c178;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #quest-progress-fill,
+        #quest-menu-button {
+            transition: none;
+        }
+    }
+
+ .mood-scrapbook,
+ .love-scrapbook,
+ .secrat-diary,
+ .guestbook {
+    box-sizing: border-box;
+    width:min(90%, 650px);
+    margin: 40px auto;
+    padding: 24px;
+    border: 2px solid #70442d;
+    border-radius: 5px;
+    background: #fff0bd;
+    color: #583a2a;
+    box-shadow: 5px 6px 0 ragba(70, 40, 20, 0.15);
+    font-family: "Caveat", cursive;
+    font-size: 21px;
+}
+
+.mood-stickers,
+.love-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mood-stickers button,
+.secret-diary button,
+.guestbook button {
+    padding: 9px 14px;
+    border:1px solid #875a3b;
+    border-radius: 7px;
+    background: #f5df9e;
+    color: #583a2a;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mood-stickers button:hover,
+.secret-diary button:hover,
+.guestbook button:hover {
+    transform: rotate(-2deg) scale(1.04);
+}
+
+.mood-stickers .mood-selected{
+    background: #e9b9b0;
+    border-width: 2px;
+}
+#diary-entry {
+    margin-top: 18px;
+    padding: 16px;
+    border: 1px dashed #875a3b;
+    background: #fff8df;
+}
+
+#diary-entry[hidden] {
+    display: none;
+}
+
+.love-card {
+    flex: 1 1 180px;
+    max-width: 220px;
+    padding:14px;
+    border: 1px dashed #875a3b;
+    background: #fff8df;
+    text-align: center;
+}
+
+.love-icon {
+    font-size: 32px;
+}
+
+.love-card h3{
+    margin-bottom: 4px;
+}
+
+.guestbook label,
+.guestbook input,
+.guestbook textarea {
+    display: block;
+    width :100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+.guestbook input,
+.guestbook textarea {
+    padding: 10px;
+    border: 1px solid #875a3b;
+    border-radius: 4px;
+    background: #fff8df;
+    color: #583a2a;
+    font: 18px inherit;
+}
+
+.guestbook-note {
+    margin-top: 14px;
+    padding: 12px;
+    background: #fff8df;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .mood-scrapbook,
+    .love-scrapbook,
+    .secret-diary,
+    .guestbook {
+        padding: 16px;
+        font-size: 18px;
+    }
 }
