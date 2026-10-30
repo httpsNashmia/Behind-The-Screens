@@ -1,3 +1,9 @@
+fetch("./typewriter.wav")
+    .then(response => {
+        console.log("Audio file status:", response.status);
+    })
+    .catch(error => console.log("Audio loading error:", error));
+
 const typewriterSound = new Audio("./typewriter.wav");
 typewriterSound.volume = 0.5;
 typewriterSound.preload = "auto";
@@ -34,10 +40,11 @@ if(title) {
     }
 
 
-    setTimeout(writeTitle,500);
+if(document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", writeTitle);
+} else {
+    writeTitle();
 }
-
-
 
 const patches = document.querySelectorAll(".stamp-card");
 
@@ -50,12 +57,13 @@ patches.forEach(function (patch) {
 
 
 const stars = document.querySelectorAll(
-    ".star1, .star2, .star3, .STAR1, .STAR2, .star4"
+    ".star1, .star2, .star3, .STAR1 img, .STAR2 img, .star4"
 );
 
 stars.forEach(function(star) {
     star.addEventListener("mouseenter", function(){
          star.style.transition = "transform 4s linear";
+         star.style.transformOrigin = "center center";
          star.style.transform  = "rotate(360deg)";
      });
 
@@ -443,339 +451,7 @@ revealElements.forEach(function (element) {
     revealObserver.observe(element);
 });
 
-
-
-(function scrapbookquestEnging() {
-    "use strict";
-
-
-
-    const STORAGE_KEY = "behindScreensQuestV1";
-
-    const defaultData = {
-        collected: [],
-        achievements: [],
-        soundEnabled: false,
-        nightMode: false,
-        promptsUsed: 0,
-        visits: 0,
-        secretFond: false
-    };
-
-
-let savedData;
-
-try{
-    savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-} catch (error) {
-    savedData =null;
 }
-
-const data ={
-    ...defaultData,
-    ...(savedData && typeof savedData === "object"
-        ? savedData
-        : {})
-
-};
-
-function saveProgress() {
-    try{
-        localStorage.setItem(STORAGE_KEY,JSON.stringify(data));
-    } catch(error) {
-        console.warn("Progress could not be saved.", error);
-
-    }
-}
-
-data.visits += 1;
-saveProgress();
-
-
-
-document.head.appendChild(engineStyles);
-
-
-
-const progressTrack = document.getElementById("quest-progress-track");
-const progressFill = document.getElementById("quest-progress-fill");
-
-function updateScrollProgress() {
-    const scrollableHeight =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
-
-    const percentage = scrollableHeight > 0
-    ? (window.scrollY/ scrollableHeight) * 100
-    : 0;
-
-progressFill.style.width =
-    Math.min(100, Math.max(0, percentage)) + "%";
-}
-
-window.addEventListener("scroll", updateScrollProgress, {
-    passive: true
-});
-
-window.addEventListener("resize", updateScrollProgress);
-
-updateScrollProgress();
-
-const menuButton = document.getElementById("quest-menu-button");
-
-const panel = document.getElementById("quest-panel");
-const notification = document.getElementById("quest-notification");
-
-menuButton.addEventListener("click", function () {
-    panel.hidden = !panel.hidden;
-
-    if (!panel.hidden){
-        renderdashboard();
-    }
-});
-
-const closeButton = document.getElementById("quest-close");
-
-closeButton = document.getElementById("click", function (){
-    panel.hidden = true;
-});
-
-
-let notificationAnimation = null;
-let notificationTimer = null;
-
-function announce(message) {
-    notification.textContent = message;
-
-    if (notificationAnimation) {
-        notificationAnimation.cancel();
-    }
-
-    clearTimeout(notificationTimer);
-
-    notificationAnimation = notification.animate(
-        [
-            {
-                opacity: 1,
-                transform: "translate(-50%, 0)"
-            },
-            {
-                opacity:0,
-                transform: "translate(-50%, 12px)"
-            }
-
-        ],
-        {
-            duration: 250,
-            fill: "forwards"
-        }
-    );
-
-    notificationTimer = setTime(function () {
-        notificationAnimation = notification.animate(
-            [
-                {
-                    opacity: 1,
-                    transform: "translate(-50%, 0)"
-                },
-                {
-                    opacity: 0,
-                    transform: "translate(-50%, 12px)"
-                }
-            ],
-            {
-                duration: 250,
-                fill: "forwards"
-            }
-        );
-    }, 2500);
-}
-
-const moodMessage = {
-    happy:"Keep this little sunshine with you today!",
-    sleepy: "A reminder that resting is productive too",
-    creative: "Your next big idea might start with a doodle.",
-    chaotic: "A little chaos makes the best stories."
-};
-
-document.querySelectorAll("[data-mood]").forEach(function (button) {
-    button.aadEventListener("click", function () {
-        const mood = button.dataset.mood;
-
-        document.querySelector("#mood-message").textContent =
-            moodMessage[mood];
-
-        document.querySelectorAll("[data-mood]").forEach(function (item) {
-            item.classList.remove("mood-selected");
-        });
-
-        button.classList.add("mood-selected");
-    });
-});
-
-
-const diaryButton = document.querySelector("#diary-open-button");
-const diaryEntry = document.querySelector("#diary-entry");
-
-if (diaryButton && diaryEntry) {
-    diaryButton.addEventListener("click", function () {
-        const isOpening = diaryEntry.hidden;
-
-        diaryEntry.hidden = !isOpening;
-        diaryButton.textContent= isOpening ? "Close Diary" : "Open Diary";
-        diaryButton.setAttribute("aria-expanded", String(isOpening));
-    });
-}
-})()
-
-const stickers = [
-    "🌷", "🐈", "🍓", "🦋",
-    "🎀", "⭐", "🍒", "🌙",
-    "🧸", "💌", "🪻", "🍰"
-];
-
-const findStickersButton = document.getElementById("find-sticker");
-const stickerDisplay = document.getElementById("sticker-display");
-const stickerCount = document.getElementById("sticker-count");
-
-function renderStickers() {
-    stickerDisplay.textContent = "";
-
-    data.collected.forEach(function (sticker) {
-        const stickerElement = document.createElement("span");
-        stickerElement.textContent = sticker + " ";
-        stickerElement.className = "collected-sticker";
-
-        stickerDisplay.appendchilp(stickerElement);
-    });
-
-    stickerCount.textContent =
-        data.collected.length + "stickers collected";
-}
-
-findStickersButton.addEventListener("click",function() {
-    const availableStickers = stickers.finter(function (sticker) {
-        return !data.collected.inludes(sticker);
-    });
-
-    if(availableStickers.lenth === 0) {
-        announce("You found every sticker! You're acollector! 🎀");
-        return;
-    }
-
-    const randomIndex = Math.floor(
-        Math.random() * availableStickers.length
-    );
-
-    const newSticker = availableStickers[randomIndex];
-
-    data.collected.push(newSticker);
-
-    saveProgress();
-    renderStickers();
-
-    announce("You discovered a new sticker: " + newSticker);
-});
-
-renderStickers();
-
-const compliments = [
-    "You creativity deserves alittle applause. ✨",
-    "You make ordinary things feel magical.🌷",
-    "keep creating, even when things get messy .🎨",
-    "You ideas deserve to exist.♡",
-    "Every little achievment counts.⭐",
-    "this scrapbook wouldn't be the same without you!"
-];
-
-const complimenTextButton = 
-    document.getElementById("compliment-button");
-
-const complimentText =
-    document.getElementById("compliment-text");
-    
-complimenTextButton.addEventListener("click", function () {
-    const randomIndex = Math.floor(
-        Math.random() * compliments.length
-    ); complimentText.textContent = compliments[randomIndex];
-});
-
-const secretSequence = [
-    "b","e","h","i","n","d"
-];
-
-let typeKeys = [];
-
-document.addEventListener("keydown", function (event) {
-    if (
-        event.target.matches("input, textarea") ||
-        event.target.isContentEditable
-    ) {
-        return;
-    }
-
-
-    typeKeys.push(event.key.toLowerCase());if (typedKeys.length > secretSequence.length) {
-        typedKeys.shift();
-    }
-
-    const correctSequence = secretSequence.every(
-        function (key, index) {
-            return typedKeys[index] === key;
-        }
-    );
-
-    if (
-        correctSequence &&
-        typedKeys.length === secretSequence.length
-    ) {
-        announce("SECRET UNLOCKED! You found the hidden page! 🐈‍⬛");
-
-        data.secretFound = true;
-        saveProgress();
-
-        typedKeys = [];
-    }
-});
-
-const challenges = [
-    "Draw something using only three colours.",
-    "Write a tiny story in five sentences.",
-    "Take a photograph of something beautiful.",
-    "Create a new scrapbook sticker.",
-    "Write down three things you learned.",
-    "Make a doodle of your favourite animal."
-];
-
-const challengeText =
-    document.getElementById("challenge-text");
-
-const completeChallenge =
-    document.getElementById("complete-challenge");
-
-const today = new Date().toDateString();
-
-const dailyIndex = Math.floor(
-    new Data(today).getTime() / 86400000
-) % challenges.length;
-
-challengeText.textContent = challenges[dailyIndex];
-
-completeChallenge.addEventListener("click", function () {
-    if (data.lastChallenge === today) {
-        announce("You have already completed today's challenge!");
-        return;
-
-    }
-
-    data.lastChallenge= today;
-    data.achievements.push("Daily challenge completed");
-
-    saveProgress();
-
-    announce("Challenge completed! Amazing work bro");
-});
-
 
 
 

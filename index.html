@@ -19,6 +19,7 @@
                 <a href="#journal">Journal</a>
                 <a href="#film">Film</a>
                 <a href="#contact">Contact</a>
+                <a href="#library">Library</a>
 
             </nav>
 
@@ -68,8 +69,7 @@
                 <div class="para1">
 
                 <p>
-                    Hi there! I'm Nashmia- A student, artist,
-                    table tennis player and professional overthinker from Bangladesh.
+                    Hi there! I'm Nashmia, a 14-year-old student, occasional artist, table tennis player, and professional overthinker from Bangladesh.
                     This is my first ever coding project so it might be a little rough around the edges.
                     I love learning new things so this is probably my 12077th side quest.
                     Have a look around, make yourself at home, and PLEASE ignore any questionable design decisions. I like to call them "creative choices".
@@ -322,6 +322,21 @@
 
     </section>
 
+    <section id="Library" class="library">
+
+        <img src="background-library.jpg" class="background-library" alt="a navy blue patterned background">
+
+        <div class="library-title">
+            <h1>
+                A mini library.
+            </h1>
+        </div>
+        
+        <img src="Torn Beige Paper Tape Sticker.png" class="tape2" alt="Torn Beige Paper held with Tape">
+
+    </section>
+    
+    
     <section id="contact" class="contact">
 
         <div>
@@ -398,279 +413,6 @@
         <img src="Hand-Drawn Bye Bye Speech Bubble.png" class="bye" alt="speech bubble saying bye bye">
 
     </section>
-
-<button id="quest-menu-button" type="button">
-    My Scrapbook
-</button>
-
-<aside id="quest-panel" hidden aria-label="Scrapbook quest dashboard">
-    <h2>Scrapbook HQ</h2>
-
-    <p id="quest-welcome">Welcome to your scrapbook!</p>
-    <p id="quest-collection-count"></p>
-    <p id="quest-achievment-count"></p>
-    <p id="quest-visit-count"></p>
-
-    <hr>
-
-    <div id="quest-current-prompt">
-        Your next creative idea is waiting...
-    </div>
-
-    <button class="quest-action" id="quest-new-prompt" type="button">
-        Give me a journal prompt
-    </button>
-
-    <button class="quest-action" id="quest-show-achievements" type="button">
-        View achievements
-    </button>
-
-    <button class="quest-action" id="quest-toggle-sound" type="button">
-        Sound effects: off
-    </button>
-
-    <button class="quest-action" id="quest-toggle-night" type="button">
-        Toggle night mode
-    </button>
-
-    <button class="quest-action" id="quest-keyboard-help" type="button">
-        Show secret controls
-    </button>
-
-    <button class="quest-action" id="quest-close" type="button">
-        Close scrapbook
-    </button>
-
-    <hr>
-
-    <h3>Today's Mini Challenge</h3>
-
-    <p id="quest-daily-challenge">
-        Take a break, find inspiration, and add one tiny detail to your scrapbook!
-    </p>
-
-    <button class="quest-action" id="quest-compelet-challenge" type="button">
-        I did it!
-    </button>
-
-    <p id="quest-challenge-status"></p>
-
-    <hr>
-
-    <h3>My Creative Goals</h3>
-
-    <label>
-        <input type="checkbox" class="quest-goal">
-        Add a new scrapbook sticker
-    </label>
-
-    <br>
-
-    <label>
-        <input type="checkbox" class="quest-goal">
-        Write a journal entry
-    </label>
-
-    <br>
-
-    <label>
-        <input type="checkbox" class="quest-goal">
-        Learn a new JavaScript trick
-    </label>
-
-    <br>
-
-    <label>
-        <input type="checkbox" class="quest-goal">
-        Fix one website bug
-    </label>
-
-    <p id="quest-goal-progress">0/4 goals completed</p>
-
-    <hr>
-
-    <h3>Memory Keeper</h3>
-
-    <p>Every little detail tells a story.</p>
-
-    <p>Memories collected: <span id="quest-memory-count">0</span></p>
-
-    <button class="quest-action" id="quest-add-memory" type="button">
-        + Add a memory
-    </button>
-
-    <hr>
-
-    <h3>A Note for You</h3>
-
-    <p id="quest-compliment">
-        You are creating something that is uniquely yours.
-    </p>
-
-    <button class="quest-action" id="quest-new-compliment" type="button">
-        Open another little note
-    </button>
-
-    <hr>
-
-    <h3>Current Creative Mood</h3>
-
-    <select id="quest-mood">
-        <option value="dreamy">Dreamy</option>
-        <option value="cozy">Cozy</option>
-        <option value="chaotic">Chaotic creativity</option>
-        <option value="focused">Focused mode</option>
-        <option value="sleepy">Sleepy artist</option>
-    </select>
-
-    <p id="quest-mood-message">Your creative mood is dreamy.</p>
-</aside>
-
-
-<div id="quest-progress-track">
-    <div id="quest-progress-fill"></div>
-</div>
-
-<div id="quest-notification" role="status" aria-live="polite"></div>
-
-
-<div class="scrapbook-floaties" aria-hidden="true">
-    <span class="floaty floaty-star"></span>
-    <span class="floaty floaty-heart"></span>
-    <span class="floaty floaty-sparkle"></span>
-    <span class="floaty floaty-flower"></span>
-    <span class="floaty floaty-star-two"></span>
-</div>
-
-<button class="scrapbook-magic-cat" type="button" aria-label="Click the magic cat">
-    <img src="black-cat.png" alt="">
-    <span class="cat-tiny-lable">Psst... click me!</span>
-</button>
-
-<div class="scrapbook-secret-notes">
-    <button
-        class="scrapbook-secret-note"
-        type="button"
-        data-message="Every masterpiece begins with a messy first draft."
-        aria-label="Reveal a secret note">
-    </button>
-
-    <button
-        class="scrapbook-secret-note"
-        type="button"
-        data-message="Plot twist: you are the main character of this little story."
-        aria-label="Reveal a secret note">
-    </button>
-
-    <button
-        class="scrapbook-secret-note"
-        type="button"
-        data-message="Reminder: you do not have to be perfect to make something beautiful."
-        aria-label="Reveal a secret note">
-    </button>
-</div>
-
-
-<section class="mood-scrapbook">
-    <h2>Today's Little Mood</h2>
-
-    <p>Choose the sticker that matches your vibe!</p>
-
-    <div class="mood-stickers">
-        <button type="button" data-mood="happy">Happy</button>
-        <button type="button" data-mood="sleepy">Sleepy</button>
-        <button type="button" data-mood="creative">Creative</button>
-        <button type="button" data-mood="chaotic">Chaotic</button>
-    </div>
-
-    <p id="mood-message">Your little message will appear here.</p>
-</section>
-
-
-<section class="love-scrapbook">
-    <h2>Little Things I Love</h2>
-
-    <div class="love-grid">
-        <article class="love-card">
-            <span class="love-icon" aria-hidden="true">🎨</span>
-            <h3>Making art</h3>
-            <p>Turning random ideas into something real.</p>
-        </article>
-
-        <article class="love-card">
-            <span class="love-icon" aria-hidden="true">🇫🇷</span>
-            <h3>French</h3>
-            <p>Learning a new language, one word at a time.</p>
-        </article>
-
-        <article class="love-card">
-            <span class="love-icon" aria-hidden="true">🏓</span>
-            <h3>Table tennis</h3>
-            <p>Fast rallies and even faster reactions.</p>
-        </article>
-
-        <article class="love-card">
-            <span class="love-icon" aria-hidden="true">💻</span>
-            <h3>Coding</h3>
-            <p>Building little worlds from lines of code.</p>
-        </article>
-    </div>
-
-<div id="sticker-collction">
-    <h2> My Sticker Collection</h2>
-    <p id="sticker-count">0 stickers collected</p>
-
-    <div id="sticker-display"></div>
-
-    <buttom id="find-sticker" type="button">
-        Find amystery sticker
-    </buttom>
-</div>
-
-<div class+"compliment-card">
-    <h2>💌 A Letter for You</h2>
-
-    <p id="complimrnt-text">
-        A little evcouragment is waitting...
-    </p>
-
-    <button id="compliment-button" type="button">
-        Open a letter
-    </button>
-</div>
-
-
-<section id="daily-challenge">
-    <h2> Todays Creative challenge </h2>
-
-    <p id="challenge-text">
-        Loading your challenge...
-    </p>
-
-    <button id="complete-challenge" type="button">
-        I completed it!
-    </button>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  <script src="script.js"></script>
 </body>
