@@ -1,3 +1,7 @@
+const typewriterSound = new Audio("./typewriter.wav");
+typewriterSound.volume = 0.5;
+typewriterSound.preload = "auto";
+
 const title = document.querySelector(".paper-content h1");
 
 if(title) {
@@ -12,6 +16,17 @@ if(title) {
     function writeTitle() {
         if (letterIndex < titleText.length) {
             title.textContent += titleText.charAt(letterIndex);
+            
+            if (!typewriterSound.paused) {
+                typewriterSound.pause();
+            }
+
+            typewriterSound.currentTime=0;
+
+            typewriterSound.play().catch(error=> {
+                console.log("Typewriter audio failed:", error);
+            });
+            
             letterIndex++;
 
             setTimeout(writeTitle,110);
@@ -24,7 +39,7 @@ if(title) {
 
 
 
-const patches = document.querySelectorAll(".stam-card");
+const patches = document.querySelectorAll(".stamp-card");
 
 patches.forEach(function (patch) {
     patch.addEventListener("click",function(){
@@ -57,7 +72,7 @@ stars.forEach(function(star) {
 const catMessages = [
     "Meow! Hey there little visitor.",
     "Welcome to my home.",
-    "Click on the hand to pet me.",
+    "Meow",
     "This website is powered by sleepless nights and coffee.",
     "Go explore the this little corner of the world! "
 ];
@@ -612,3 +627,155 @@ if (diaryButton && diaryEntry) {
     });
 }
 })()
+
+const stickers = [
+    "🌷", "🐈", "🍓", "🦋",
+    "🎀", "⭐", "🍒", "🌙",
+    "🧸", "💌", "🪻", "🍰"
+];
+
+const findStickersButton = document.getElementById("find-sticker");
+const stickerDisplay = document.getElementById("sticker-display");
+const stickerCount = document.getElementById("sticker-count");
+
+function renderStickers() {
+    stickerDisplay.textContent = "";
+
+    data.collected.forEach(function (sticker) {
+        const stickerElement = document.createElement("span");
+        stickerElement.textContent = sticker + " ";
+        stickerElement.className = "collected-sticker";
+
+        stickerDisplay.appendchilp(stickerElement);
+    });
+
+    stickerCount.textContent =
+        data.collected.length + "stickers collected";
+}
+
+findStickersButton.addEventListener("click",function() {
+    const availableStickers = stickers.finter(function (sticker) {
+        return !data.collected.inludes(sticker);
+    });
+
+    if(availableStickers.lenth === 0) {
+        announce("You found every sticker! You're acollector! 🎀");
+        return;
+    }
+
+    const randomIndex = Math.floor(
+        Math.random() * availableStickers.length
+    );
+
+    const newSticker = availableStickers[randomIndex];
+
+    data.collected.push(newSticker);
+
+    saveProgress();
+    renderStickers();
+
+    announce("You discovered a new sticker: " + newSticker);
+});
+
+renderStickers();
+
+const compliments = [
+    "You creativity deserves alittle applause. ✨",
+    "You make ordinary things feel magical.🌷",
+    "keep creating, even when things get messy .🎨",
+    "You ideas deserve to exist.♡",
+    "Every little achievment counts.⭐",
+    "this scrapbook wouldn't be the same without you!"
+];
+
+const complimenTextButton = 
+    document.getElementById("compliment-button");
+
+const complimentText =
+    document.getElementById("compliment-text");
+    
+complimenTextButton.addEventListener("click", function () {
+    const randomIndex = Math.floor(
+        Math.random() * compliments.length
+    ); complimentText.textContent = compliments[randomIndex];
+});
+
+const secretSequence = [
+    "b","e","h","i","n","d"
+];
+
+let typeKeys = [];
+
+document.addEventListener("keydown", function (event) {
+    if (
+        event.target.matches("input, textarea") ||
+        event.target.isContentEditable
+    ) {
+        return;
+    }
+
+
+    typeKeys.push(event.key.toLowerCase());if (typedKeys.length > secretSequence.length) {
+        typedKeys.shift();
+    }
+
+    const correctSequence = secretSequence.every(
+        function (key, index) {
+            return typedKeys[index] === key;
+        }
+    );
+
+    if (
+        correctSequence &&
+        typedKeys.length === secretSequence.length
+    ) {
+        announce("SECRET UNLOCKED! You found the hidden page! 🐈‍⬛");
+
+        data.secretFound = true;
+        saveProgress();
+
+        typedKeys = [];
+    }
+});
+
+const challenges = [
+    "Draw something using only three colours.",
+    "Write a tiny story in five sentences.",
+    "Take a photograph of something beautiful.",
+    "Create a new scrapbook sticker.",
+    "Write down three things you learned.",
+    "Make a doodle of your favourite animal."
+];
+
+const challengeText =
+    document.getElementById("challenge-text");
+
+const completeChallenge =
+    document.getElementById("complete-challenge");
+
+const today = new Date().toDateString();
+
+const dailyIndex = Math.floor(
+    new Data(today).getTime() / 86400000
+) % challenges.length;
+
+challengeText.textContent = challenges[dailyIndex];
+
+completeChallenge.addEventListener("click", function () {
+    if (data.lastChallenge === today) {
+        announce("You have already completed today's challenge!");
+        return;
+
+    }
+
+    data.lastChallenge= today;
+    data.achievements.push("Daily challenge completed");
+
+    saveProgress();
+
+    announce("Challenge completed! Amazing work bro");
+});
+
+
+
+

@@ -54,7 +54,7 @@ nav a {
 .paper-content h1 {
     font-family: "Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
-    font-size: 7rem;
+    font-size: 5rem;
     margin:5px;
 }
 
@@ -62,7 +62,7 @@ nav a {
 .paper-content p {
     font-family: "Caveat", cursive;
     color: rgba(83, 44, 20, 0.977);
-    font-size: 3rem;
+    font-size: 2rem;
     margin:0px;
 
 }
@@ -507,7 +507,7 @@ nav a {
 
 .strip1 {
     position: absolute;
-    width: 150px;
+    width: 550px;
     height: 350px;
     object-fit: fill;
     bottom: -120px;
