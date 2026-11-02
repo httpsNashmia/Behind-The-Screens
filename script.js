@@ -1,17 +1,7 @@
-fetch("./typewriter.wav")
-    .then(response => {
-        console.log("Audio file status:", response.status);
-    })
-    .catch(error => console.log("Audio loading error:", error));
-
-const typewriterSound = new Audio("./typewriter.wav");
-typewriterSound.volume = 0.5;
-typewriterSound.preload = "auto";
-
 const title = document.querySelector(".paper-content h1");
 
-if(title) {
-    const titleText = title.textContent;
+if (title) {
+    const titleText = title.textContent.trim();
 
     title.textContent = "";
     title.style.width = "auto";
@@ -22,27 +12,13 @@ if(title) {
     function writeTitle() {
         if (letterIndex < titleText.length) {
             title.textContent += titleText.charAt(letterIndex);
-            
-            if (!typewriterSound.paused) {
-                typewriterSound.pause();
-            }
 
-            typewriterSound.currentTime=0;
-
-            typewriterSound.play().catch(error=> {
-                console.log("Typewriter audio failed:", error);
-            });
-            
             letterIndex++;
 
-            setTimeout(writeTitle,110);
+            setTimeout(writeTitle, 110);
         }
     }
 
-
-if(document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", writeTitle);
-} else {
     writeTitle();
 }
 
@@ -451,7 +427,46 @@ revealElements.forEach(function (element) {
     revealObserver.observe(element);
 });
 
+
+console. log({
+    screenwidth: document.documentElement.clientWidth,
+    pageWidth: document.documentElement.scrollWidth,
+    bodyWidth: document.body.scrollWidth,
+    horizontalOverflow:
+        document.documentElement.scrollWidth > document.documentElement.clientWidth
+
+});
+
+const cat = document.querySelector(".black-cat");
+
+const catMessage = [
+    "psst... you're doing great!",
+    "meow meow!",
+    "have you had some water today?",
+    "stop overthinking. start creating.",
+    "this website is pawsome.",
+    "the cat approves.",
+    "go touch some grass. respectfully.",
+    "you found me! congratulations."
+];
+
+if (cat) {
+    cat.style.cursos = "pointer";
+
+    cat.addEventListener("click", function() {
+        let message = document.querySelector(".cat-message");
+
+        if (!message) {
+            message = document.createElement("div");
+            message.className = "cat-message";
+            document.body.appendChild(message);
+        }
+
+        const randomIndex = Math.floor(
+            Math.random() * catMessage.length
+        );
+
+        message.textContent = catMessages[randomIndex];
+        message.style.display = "block";
+    });
 }
-
-
-

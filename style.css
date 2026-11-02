@@ -494,7 +494,7 @@ nav a {
 .film-content {
     position: absolute;
     width: 500px;
-    top: 10%;
+    top: 50px;
     left: 50%;
     right:50%;
     text-align: center;
@@ -511,7 +511,7 @@ nav a {
     width: 150px;
     height: 350px;
     object-fit: fill;
-    bottom: 0px;
+    bottom: 200px;
     left: 380px;
     z-index: 2;
 }
@@ -539,7 +539,7 @@ nav a {
 .film-content2 {
     position: absolute;
     width: 50px;
-    top: 35%;
+    top: 23%;
     left: 400px;
     text-align: center;
     font-family: "Caveat", cursive;
@@ -802,7 +802,7 @@ nav a {
 .film-content4 {
     position: absolute;
     width: 10px;
-    bottom: 0px;
+    bottom: 350px;
     left: 970px;
     text-align: center;
     font-family: "Caveat", cursive;
@@ -849,7 +849,7 @@ body {
 .library-title {
     position: absolute;
     width: max-content;
-    top: -20px;
+    top: -82px;
     left:50%;
     text-align: center;
     font-family: "Caveat", cursive;
@@ -863,8 +863,119 @@ body {
     position: absolute;
     width: 530px;
     height: 180px;
-    top:12px;
+    top:-62px;
     left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.book1 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:128px;
+    left: 180px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.book2 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:128px;
+    left: 450px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book3 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:128px;
+    left: 720px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.book4 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:128px;
+    left: 990px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book5 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:378px;
+    left: 180px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book6 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:378px;
+    left: 450px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book7 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:378px;
+    left: 720px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book8 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:378px;
+    left: 990px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book9 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:628px;
+    left: 180px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book10 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:628px;
+    left: 450px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book11 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:628px;
+    left: 720px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.book12 {
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    top:628px;
+    left: 990px;
     z-index: 2;
     transform: translateX(-50%);
 }
